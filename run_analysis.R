@@ -43,4 +43,4 @@ df_subset = df_raw[,c(1:3,df_sub_col)]
 df_means <- df_subset %>% group_by(SubjectId,ActivityName) %>% summarise_each(funs(mean))
 
 # Write the tidy data out to a file
-write.table(df_means, "mean_phone_data_by_subject_activity.txt")
+write.table(df_means, "mean_phone_data_by_subject_activity.txt", row.name=FALSE)
